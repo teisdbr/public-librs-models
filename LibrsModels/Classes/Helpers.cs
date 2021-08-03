@@ -1,5 +1,5 @@
 ﻿using System;
-using TeUtil.Extensions;
+using NibrsModels.Extensions;
 
 namespace LibrsModels.Classes
 {
