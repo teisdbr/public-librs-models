@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageVersion>0.0.74</PackageVersion>
+        <Title>LibrsModels</Title>
+        <Authors>Technology Engineers, Inc.</Authors>
+        <Description>Contains C# Objects for LIBRS State Reporting. </Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+      <PackageReference Include="NibrsModels" Version="1.2.22" />
+      <PackageReference Include="Util" Version="1.0.7" />
+    </ItemGroup>
+
+</Project>
