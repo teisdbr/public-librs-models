@@ -1,11 +1,11 @@
 # LIBRS Models
 
-Hey, howdy. 
+This is the official repository for the Louisiana Incident Based Reporting System (LIBRS) Data Models. These models are used in our new JSON Validator, and should be considered in Beta. 
 
-This is the repository for our LIBRS Data Models. Specifically, this repository includes the C# Models that are used by the LIBRS JSON Validator. 
+The Models are built for C#, as that is the primary language that LIBRS is developed in these days. If you are a Java developer, or use another language, and would like to contribute by converting these models into your language of choice, feel free to make a pull request!
 
-We primarily work with C# for these kinds of things, so if you are a Java developer (or anything else) and would like to contribute these models in the language you use, we'd love to get a Pull Request from you!
+This library can be found on Nuget.org here: https://www.nuget.org/packages/LibrsModels/
 
-Nuget packages of these models can be found here:
+# Documentation
 
-LINKS
+Documentation for these models can be found on the librs tech spec page, https://docs.librs.org/models
