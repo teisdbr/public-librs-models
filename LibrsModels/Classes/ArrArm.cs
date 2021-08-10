@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using LibrsModels.Classes;
 using Newtonsoft.Json;
@@ -7,9 +8,7 @@ namespace LibrsModels.Classes
     public class ArrArm : LegacyLibrsValues, IPaddingFixer
     {
 
-        [JsonProperty("arrestSeqNum")] public string ArrestSeqNum { get; set; } = "   ";
-
-        [JsonProperty("arrestArmedWith")] public string ArrestArmedWith { get; set; } = "   ";
+        [JsonProperty("arrestArmedWith")] public List<Weapon> ArrestArmedWith { get; set; } = new List<Weapon>();
         public ArrArm()
         {
             SegmentDescriptor = "61";
@@ -19,8 +18,8 @@ namespace LibrsModels.Classes
 
         public void FixPaddings()
         {
-            ArrestSeqNum = ArrestSeqNum.PadL(3, '0');;
-            ArrestArmedWith = ArrestArmedWith.PadR(3);
+            //ArrestSeqNum = ArrestSeqNum.PadL(3, '0');;
+            //ArrestArmedWith = ArrestArmedWith.PadR(3);
         }
     }
 }

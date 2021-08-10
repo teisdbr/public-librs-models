@@ -9,9 +9,10 @@ namespace LibrsModels.Classes
     public class Offender : LegacyLibrsValues, IPaddingFixer
     {
 
-        [JsonProperty("offenderSeqNum")] public string OffenderSeqNum { get; set; } = "   ";
+        [JsonProperty("offenderSeqNum")] public int? OffenderSeqNum { get; set; }
 
-        [JsonProperty("age")] public string Age { get; set; } = "   ";
+        [JsonProperty("age")] public int? Age { get; set; }
+        [JsonProperty("estimatedAge")] public bool EstimatedAge { get; set; } = false;
 
         [JsonProperty("dob")] public DateTime? Dob { get; set; }
 
@@ -20,7 +21,7 @@ namespace LibrsModels.Classes
         [JsonProperty("race")] public string Race { get; set; } = " ";
         
         [JsonProperty("gender")] public string Gender { get; set; } = "   ";
-        [JsonProperty("biasMotivation")] public string BiasMotivation { get; set; } = "  ";
+        [JsonProperty("biasMotivation")] public int? BiasMotivation { get; set; }
 
         [JsonProperty("ethnicity")] public string Ethnicity { get; set; } = " ";
         
@@ -34,12 +35,12 @@ namespace LibrsModels.Classes
 
         public void FixPaddings()
         {
-            OffenderSeqNum = OffenderSeqNum.PadL(3, '0');;
-            Age = PadOffenderAge(Age);
+            //OffenderSeqNum = OffenderSeqNum.PadL(3, '0');;
+            //Age = PadOffenderAge(Age);
             Sex = Sex.PadR(1);
             Gender = Gender.PadR(3);
             Race = Race.PadR(1);
-            BiasMotivation = BiasMotivation.PadL(2);
+            //BiasMotivation = BiasMotivation.PadL(2);
             Ethnicity = Ethnicity.PadR(1);
         }
 

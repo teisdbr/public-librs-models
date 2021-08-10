@@ -6,7 +6,7 @@ namespace LibrsModels.Classes
     public class VicOff : LegacyLibrsValues, IPaddingFixer
     {
 
-        [JsonProperty("victimSeqNum")] public string VictimSeqNum { get; set; }
+        [JsonIgnore] public string VictimSeqNum { get; set; }
 
         [JsonProperty("offenderNumber")]
         public string OffenderNumberRelated { get; set; } = "   ";

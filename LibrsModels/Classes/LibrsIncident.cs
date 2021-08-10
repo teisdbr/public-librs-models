@@ -18,8 +18,8 @@ namespace LibrsModels.Classes
         // List<VicInjury> VicInjury { get; }
         // List<VicOff> VicOff { get; }
         List<Arrestee> Arrestee { get; }
-        List<ArrArm> ArrArm { get; }
-        List<ArrStatute> ArrStatute { get; }
+        //List<ArrArm> ArrArm { get; }
+        //List<ArrStatute> ArrStatute { get; }
  
 
         
@@ -93,11 +93,11 @@ namespace LibrsModels.Classes
         [JsonProperty("arrestee")]
         public List<Arrestee> Arrestee { get; set; }
 
-        [JsonProperty("arrArm")]
-        public List<ArrArm> ArrArm { get; set; }
+        //[JsonProperty("arrArm")]
+        //public List<ArrArm> ArrArm { get; set; }
 
-        [JsonProperty("arrStatute")]
-        public List<ArrStatute> ArrStatute { get; set; }
+        //[JsonProperty("arrStatute")]
+        //public List<ArrStatute> ArrStatute { get; set; }
         
         [JsonProperty("arrMod")]
         public ArrMod ArrMod { get; set; }
