@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
 using NibrsModels.Extensions;
@@ -8,7 +9,7 @@ namespace LibrsModels.Classes
     public class Arrestee: LegacyLibrsValues, IPaddingFixer
     {
 
-        [JsonProperty("arrestSeqNum")] public string ArrestSeqNum { get; set; } = "   ";
+        [JsonProperty("arrestSeqNum")] public int? ArrestSeqNum { get; set; }
 
         [JsonProperty("arrestNumber")] public string ArrestNumber { get; set; } = "            ";
 
@@ -23,7 +24,7 @@ namespace LibrsModels.Classes
         [JsonProperty("multipleArresteeIndicator")]
         public string MultipleArresteeIndicator { get; set; } = "N";
 
-        [JsonProperty("age")] public string Age { get; set; } = "   ";
+        [JsonProperty("age")] public int? Age { get; set; }
 
         [JsonProperty("dob")] public DateTime? DOB { get; set; }
 
@@ -36,9 +37,13 @@ namespace LibrsModels.Classes
 
         [JsonProperty("residentStatus")] public string ResidentStatus { get; set; } = " ";
 
-        [JsonProperty("dispositionUnder17")] public string DispositionUnder17 { get; set; } = " ";
+        [JsonProperty("dispositionUnder18")] public string DispositionUnder18 { get; set; } = " ";
 
         [JsonProperty("clearanceIndicator")] public string ClearanceIndicator { get; set; } = " ";
+
+        [JsonProperty("arrestArmed")] public List<Weapon> ArrestArmed { get; set; } = new List<Weapon>();
+
+        [JsonProperty("arrestStatute")] public List<ArrStatute> ArrestStatute { get; set; } = new List<ArrStatute>();
 
         public Arrestee()
         {
@@ -49,7 +54,7 @@ namespace LibrsModels.Classes
 
         public void FixPaddings()
         {
-            ArrestSeqNum = ArrestSeqNum.PadL(3, '0');;
+            //ArrestSeqNum = ArrestSeqNum.PadL(3, '0');;
             ArrestNumber = ArrestNumber.PadL(12);
             ArrTransactionNumber = ArrTransactionNumber.PadL(15);
             ArresteeName = ArresteeName.PadR(20);
@@ -61,7 +66,7 @@ namespace LibrsModels.Classes
             Race = Race.PadR(1);
             Ethnicity = Ethnicity.PadR(1);
             ResidentStatus = ResidentStatus.PadR(1);
-            DispositionUnder17 = DispositionUnder17.PadR(1);
+            DispositionUnder18 = DispositionUnder18.PadR(1);
             ClearanceIndicator = ClearanceIndicator.PadR(1);
         }
         private string PadArresteeAge(string age)

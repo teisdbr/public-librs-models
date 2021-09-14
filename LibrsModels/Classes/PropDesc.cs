@@ -8,19 +8,20 @@ namespace LibrsModels.Classes
     public class PropDesc : LegacyLibrsValues, IPaddingFixer
     {
 
-        [JsonProperty("propertySeqNum")] public string PropertySeqNum { get; set; } = "   ";
+        [JsonProperty("propertySeqNum")] public int? PropertySeqNum { get; set; }
+        [JsonProperty("propertyLossType")] public int? PropertyLossType { get; set; }
 
-        [JsonProperty("propertyLossType")] public string PropertyLossType { get; set; } = " ";
+        [JsonProperty("propertyDescription")] public int? PropertyDescription { get; set; }
 
-        [JsonProperty("propertyDescription")] public string PropertyDescription { get; set; } = "  ";
-
-        [JsonProperty("propertyValue")] public string PropertyValue { get; set; } = "         ";
+        [JsonProperty("propertyValue")] public int? PropertyValue { get; set; }
 
         [JsonProperty("dateRecovered")] public DateTime? DateRecovered { get; set; }
 
-        [JsonProperty("suspectedDrugType")] public string SuspectedDrugType { get; set; } = "  ";
+        [JsonProperty("suspectedDrugType")] public string SuspectedDrugType { get; set; } = " ";
 
-        [JsonProperty("estimatedDrugQty")] public string EstimatedDrugQty { get; set; } = "             ";
+        [JsonProperty("counterfeitDrug")] public bool CounterfeitDrug { get; set; } = false;
+
+        [JsonProperty("estimatedDrugQty")] public decimal? EstimatedDrugQty { get; set; }
 
         [JsonProperty("typeDrugMeas")] public string TypeDrugMeas { get; set; } = "  ";
         
@@ -51,13 +52,13 @@ namespace LibrsModels.Classes
 
         public void FixPaddings()
         {
-            PropertyLossType = PropertyLossType.PadL(1);
-            PropertyDescription = PropertyDescription.PadL(2, '0');
-            PropertyValue = PropertyValue.PadL(9,'0');
+            //PropertyLossType = PropertyLossType.PadL(1);
+            //PropertyDescription = PropertyDescription.PadL(2, '0');
+            //PropertyValue = PropertyValue.PadL(9,'0');
             SuspectedDrugType = SuspectedDrugType.PadR(2);
-            EstimatedDrugQty = EstimatedDrugQty.PadL(13);
+            //EstimatedDrugQty = EstimatedDrugQty.PadL(13);
             TypeDrugMeas = TypeDrugMeas.PadL(2);
-            PropertySeqNum = PropertySeqNum.PadL(3, '0');;
+            //PropertySeqNum = PropertySeqNum.PadL(3, '0');;
         }
     }
 }

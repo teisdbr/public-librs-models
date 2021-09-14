@@ -5,10 +5,10 @@ namespace LibrsModels.Classes
 {
     public class PropertySeg: LegacyLibrsValues, IPaddingFixer
     {
-        [JsonProperty("numOfStolenVehicles")] public string NumOfStolenVehicles { get; set; } = "  ";
+        [JsonProperty("numOfStolenVehicles")] public int? NumOfStolenVehicles { get; set; }
 
         [JsonProperty("numOfRecoveredVehicles")]
-        public string NumOfRecoveredVehicles { get; set; } = "  ";
+        public int? NumOfRecoveredVehicles { get; set; }
         
         public PropertySeg()
         {
@@ -19,8 +19,8 @@ namespace LibrsModels.Classes
 
         public void FixPaddings()
         {
-            NumOfStolenVehicles = NumOfStolenVehicles == "0" ? "".PadR(2) : NumOfStolenVehicles.PadL(2, '0');
-            NumOfRecoveredVehicles = NumOfRecoveredVehicles == "0" ? "".PadR(2) : NumOfRecoveredVehicles.PadL(2, '0');
+            //NumOfStolenVehicles = NumOfStolenVehicles == "0" ? "".PadR(2) : NumOfStolenVehicles.PadL(2, '0');
+            //NumOfRecoveredVehicles = NumOfRecoveredVehicles == "0" ? "".PadR(2) : NumOfRecoveredVehicles.PadL(2, '0');
         }
     }
 }

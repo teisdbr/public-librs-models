@@ -31,11 +31,12 @@ namespace LibrsModels.Classes
 
         [JsonProperty("officerActivity")] public int? OfficerActivity { get; set; }
 
-        [JsonProperty("victimSeqNum")] public string VictimSeqNum { get; set; } = "   ";
+        [JsonProperty("victimSeqNum")] public int? VictimSeqNum { get; set; }
 
         [JsonProperty("victimType")] public string VictimType { get; set; } = " ";
 
-        [JsonProperty("age")] public string Age { get; set; } = "   ";
+        [JsonProperty("age")] public int? Age { get; set; }
+        [JsonProperty("estimatedAge")] public bool EstimatedAge { get; set; } = false;
 
         [JsonProperty("dob")] public DateTime? DOB { get; set; }
 
@@ -49,13 +50,13 @@ namespace LibrsModels.Classes
 
         [JsonProperty("residentStatus")] public string ResidentStatus { get; set; } = " ";
 
-        [JsonProperty("aggravatedAssault")] public List<string> AggravatedAssault { get; set; } = new List<string>();
+        [JsonProperty("aggravatedAssault")] public List<int> AggravatedAssault { get; set; } = new List<int>();
 
         [JsonProperty("additionalHomicide")] public string AdditionalHomicide { get; set; } = " ";
 
         [JsonProperty("precipitatingOffense")] public string PrecipitatingOffense { get; set; } = "   ";
         
-        [JsonProperty("officerActivityCircumstance")] public string OfficerActivityCircumstance { get; set; } = "  ";
+        [JsonProperty("officerActivityCircumstance")] public int? OfficerActivityCircumstance { get; set; }
 
         [JsonProperty("officerAssignmentType")] public string OfficerAssignmentType { get; set; } = " ";
 
@@ -74,15 +75,15 @@ namespace LibrsModels.Classes
 
         public void FixPaddings()
         {
-            VictimSeqNum = VictimSeqNum.PadL(3, '0');;
+            //VictimSeqNum = VictimSeqNum.PadL(3, '0');;
             VictimType = VictimType.PadR(1);
-            Age = PadVictimAge(Age);
+            //Age = PadVictimAge(Age);
             Ethnicity = Ethnicity.PadR(1);
             Gender = Gender.PadR(3);
             ResidentStatus = ResidentStatus.PadR(1);
             AdditionalHomicide = AdditionalHomicide.PadR(1);
-            AggravatedAssault.ForEach(val => val.PadR(2));
-            OfficerActivityCircumstance = OfficerActivityCircumstance.PadL(2, '0');
+            //AggravatedAssault.ForEach(val => val.PadR(2));
+            //OfficerActivityCircumstance = OfficerActivityCircumstance.PadL(2, '0');
             OfficerAssignmentType = OfficerAssignmentType.PadR(1);
             PrecipitatingOffense = PrecipitatingOffense.PadR(3);
             OfficerOri = OfficerOri.PadL(9);
