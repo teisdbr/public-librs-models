@@ -60,7 +60,7 @@ namespace LibrsModels.Classes
             ArresteeName = ArresteeName.PadR(20);
             ArrestType = ArrestType.PadR(1);
             MultipleArresteeIndicator = MultipleArresteeIndicator.PadR(1);
-            Age = PadArresteeAge(Age);
+            //Age = PadArresteeAge(Age);
             Sex = Sex.PadR(1);
             Gender = Gender.PadR(3);
             Race = Race.PadR(1);
