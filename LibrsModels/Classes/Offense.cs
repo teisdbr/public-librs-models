@@ -8,7 +8,7 @@ namespace LibrsModels.Classes
     {
         [JsonProperty("offenseSeqNum")] public int? OffenseSeqNum { get; set; }
 
-        [JsonProperty("attemptedCompleted")] public bool isCompleted { get; set; }
+        [JsonProperty("isCompleted")] public bool IsCompleted { get; set; }
 
         [JsonProperty("offConnectToVic")] public int? OffConnectToVic { get; set; }
 
