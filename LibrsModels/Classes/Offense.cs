@@ -8,7 +8,7 @@ namespace LibrsModels.Classes
     {
         [JsonProperty("offenseSeqNum")] public int? OffenseSeqNum { get; set; }
 
-        [JsonProperty("attemptedCompleted")] public string AttemptedCompleted { get; set; } = " ";
+        [JsonProperty("attemptedCompleted")] public bool isCompleted { get; set; }
 
         [JsonProperty("offConnectToVic")] public int? OffConnectToVic { get; set; }
 
@@ -61,7 +61,7 @@ namespace LibrsModels.Classes
             // If seqNum is not provided set it to "   "
             //OffenseSeqNum = OffenseSeqNum.PadL(3, '0');
             LrsNumber = LrsNumber.PadR(12);
-            AttemptedCompleted = AttemptedCompleted.PadR(1).ToUpper();
+            //AttemptedCompleted = AttemptedCompleted.PadR(1).ToUpper();
             // If seqNum is not provided set it to "   "
             //OffConnectToVic = OffConnectToVic.PadL(3, '0');
             //LocationType = LocationType.PadR(2);
