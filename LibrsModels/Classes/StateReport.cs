@@ -125,11 +125,11 @@ namespace LibrsModels.Classes
         /// </summary>
         public ConcurrentDictionary<string, string> OffenseToStateRelationship { get; set; } =
             new ConcurrentDictionary<string, string>();
-        
+
         /// <summary>
         /// Keeps track of a list of counterfeit substances ( item seq num) 
         /// </summary>
-        public ConcurrentBag<string> CounterfeitSubstances { get; set; }
+        public ConcurrentBag<string> CounterfeitSubstances { get; set; } = new ConcurrentBag<String>();
 
         #endregion
     }
