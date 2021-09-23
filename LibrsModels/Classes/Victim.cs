@@ -29,7 +29,7 @@ namespace LibrsModels.Classes
         [JsonIgnore]
         public List<object> GetInvalidDataElement31Choices { get; set; }
 
-        [JsonProperty("officerActivity")] public int? OfficerActivity { get; set; }
+        
 
         [JsonProperty("victimSeqNum")] public int? VictimSeqNum { get; set; }
 
@@ -55,8 +55,8 @@ namespace LibrsModels.Classes
         [JsonProperty("additionalHomicide")] public string AdditionalHomicide { get; set; } = " ";
 
         [JsonProperty("precipitatingOffense")] public string PrecipitatingOffense { get; set; } = "   ";
-        
-        [JsonProperty("officerActivityCircumstance")] public int? OfficerActivityCircumstance { get; set; }
+
+        [JsonProperty("officerActivity")] public int? OfficerActivity { get; set; }
 
         [JsonProperty("officerAssignmentType")] public string OfficerAssignmentType { get; set; } = " ";
 
