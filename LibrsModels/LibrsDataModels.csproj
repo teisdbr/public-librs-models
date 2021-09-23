@@ -4,7 +4,7 @@
         <TargetFramework>netstandard2.0</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageVersion>1.0.11</PackageVersion>
-        <Title>LibrsModels</Title>
+        <Title>LibrsDataModels</Title>
         <Authors>Technology Engineers, Inc.</Authors>
         <Description>Contains C# Objects for LIBRS State Reporting. </Description>
     </PropertyGroup>
@@ -12,7 +12,7 @@
     <ItemGroup>
       <PackageReference Include="MongoDB.Driver" Version="2.10.2" />
       <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-      <PackageReference Include="NibrsModels" Version="1.3.2" />
+      <PackageReference Include="NibrsDataModels" Version="1.3.9" />
     </ItemGroup>
 
 </Project>
