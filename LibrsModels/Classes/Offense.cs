@@ -67,7 +67,7 @@ namespace LibrsModels.Classes
             //LocationType = LocationType.PadR(2);
             //Premises = Premises.PadR(2);
             CriminalActivity.ForEach( val => val.PadR(1));
-            //Weapons.ForEach(val => val.WeaponForce.PadR(3));
+            Weapons.ForEach(val => val.WeaponForce?.ToString()?.PadR(3));
             MethodOfEntry = MethodOfEntry.PadR(1);
             AgencyAssignedNibrs = AgencyAssignedNibrs.PadR(3);
             Inchoate = Inchoate.PadR(2);
