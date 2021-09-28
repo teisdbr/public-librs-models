@@ -131,6 +131,15 @@ namespace LibrsModels.Classes
         /// </summary>
         public ConcurrentBag<string> CounterfeitSubstances { get; set; } = new ConcurrentBag<String>();
 
+        /// <summary>
+        /// Keeps track of the Officer Activity when Officer is Victim
+        /// </summary>
+        public ConcurrentDictionary<string,string> VictimOfficerActivity { get; set; } = new ConcurrentDictionary<string, string>();
+        /// <summary>
+        /// Keeps track of the Officer Assignment when Officer is Victim
+        /// </summary>
+        public ConcurrentDictionary<string, string> VictimOfficerAssignment { get; set; } = new ConcurrentDictionary<string, string>();
+
         #endregion
     }
 }
