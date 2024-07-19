@@ -35,7 +35,7 @@ namespace LibrsModels.Classes
 
         [JsonProperty("victimType")] public string VictimType { get; set; } = " ";
 
-        [JsonProperty("age")] public int? Age { get; set; }
+        [JsonProperty("age")] public string Age { get; set; }
         [JsonProperty("estimatedAge")] public bool EstimatedAge { get; set; } = false;
 
         [JsonProperty("dob")] public DateTime? DOB { get; set; }

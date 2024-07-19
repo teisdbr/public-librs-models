@@ -25,6 +25,7 @@ namespace LibrsModels.Classes
         public string MultipleArresteeIndicator { get; set; } = "N";
 
         [JsonProperty("age")] public int? Age { get; set; }
+        [JsonProperty("estimatedAge")] public bool? EstimatedAge { get; set; }
 
         [JsonProperty("dob")] public DateTime? DOB { get; set; }
 
