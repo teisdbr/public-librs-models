@@ -24,7 +24,7 @@ namespace LibrsModels.Classes
         [JsonProperty("multipleArresteeIndicator")]
         public string MultipleArresteeIndicator { get; set; } = "N";
 
-        [JsonProperty("age")] public int? Age { get; set; }
+        [JsonProperty("age")] public string Age { get; set; }
         [JsonProperty("estimatedAge")] public bool? EstimatedAge { get; set; }
 
         [JsonProperty("dob")] public DateTime? DOB { get; set; }
@@ -70,7 +70,7 @@ namespace LibrsModels.Classes
             DispositionUnder18 = DispositionUnder18.PadR(1);
             ClearanceIndicator = ClearanceIndicator.PadR(1);
         }
-        private string PadArresteeAge(string age)
+        public string PadArresteeAge(string age)
         {
             if (age.IsNullBlankOrEmpty()) return "".PadR(3);
             if (age.Contains('E'))
