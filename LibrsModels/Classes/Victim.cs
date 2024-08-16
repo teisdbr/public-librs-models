@@ -89,7 +89,7 @@ namespace LibrsModels.Classes
             OfficerOri = OfficerOri.PadL(9);
         }
 
-        private string PadVictimAge(string age)
+        public string PadVictimAge(string age)
         {
             if (age.IsNullBlankOrEmpty()) return "".PadR(3);
             // If estimated, pad 3 characters
