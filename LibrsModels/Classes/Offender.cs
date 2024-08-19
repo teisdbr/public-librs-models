@@ -11,7 +11,7 @@ namespace LibrsModels.Classes
 
         [JsonProperty("offenderSeqNum")] public int? OffenderSeqNum { get; set; }
 
-        [JsonProperty("age")] public int? Age { get; set; }
+        [JsonProperty("age")] public string Age { get; set; }
         [JsonProperty("estimatedAge")] public bool EstimatedAge { get; set; } = false;
 
         [JsonProperty("dob")] public DateTime? Dob { get; set; }
@@ -44,7 +44,7 @@ namespace LibrsModels.Classes
             Ethnicity = Ethnicity.PadR(1);
         }
 
-        private string PadOffenderAge(string age)
+        public string PadOffenderAge(string age)
         {
             if (age.IsNullBlankOrEmpty()) return "".PadR(3);
             if (age.Contains('E'))
