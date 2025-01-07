@@ -27,6 +27,8 @@ namespace LibrsModels.Classes
 
         [JsonProperty("excpClearDate")] public DateTime? ExcpClearDate { get; set; }
 
+        [JsonProperty("cargoTheft")] public bool? CargoTheft { get; set; }
+
         [JsonIgnore] public bool HasGroupAOffense { get; set; }
 
         public Admin()
